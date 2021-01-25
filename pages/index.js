@@ -5,7 +5,8 @@ import QuizBackground from "../src/components/QuizBackground"
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizLogo from '../src/components/QuizLogo';
-import NextSeo from 'next-seo';
+import Head from 'next/head';
+import Link from 'next/link';
 
 export const QuizContainer = styled.div`
   width: 100%; 
@@ -20,20 +21,33 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-  <QuizBackground backgroundImage={db.bg}>
-        <QuizContainer>
-          <QuizLogo />
-            <Widget>
-              <Widget.Header>
-                <h1>Perguntas do Quiz</h1>
-              </Widget.Header>
-              <Widget.Content>
-                Aqui vão as perguntas e as opções
-              </Widget.Content>  
-            </Widget>                
-          <Footer />  
-        </QuizContainer>
-    <GitHubCorner projectUrl="http://https://github.com/ThiagoDC1001/mastermindquiz" />
-  </QuizBackground>
+   <>
+   <div>   
+      <Head>
+        <title>Tech Questions</title>
+
+        <meta property="og:title" content="Master Mind Quiz" key="title" />
+        <meta property="og:image" content={db.bg}/>
+        <meta property="og:image:type" content="image/jpg"/>
+    
+      </Head>   
+    </div>
+      <QuizBackground backgroundImage={db.bg}>
+            <QuizContainer>
+              <QuizLogo />
+                <Widget>
+                  <Widget.Header>
+                    <h1>Perguntas do Quiz</h1>
+                  </Widget.Header>
+                  <Widget.Content>
+                    Aqui vão as perguntas e as opções
+                  </Widget.Content>  
+                </Widget> 
+
+              <Footer />  
+            </QuizContainer>
+        <GitHubCorner projectUrl="https://github.com/ThiagoDC1001/mastermindquiz" />
+      </QuizBackground>  
+    </>
   )
 }
