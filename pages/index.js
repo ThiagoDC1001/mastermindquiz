@@ -1,12 +1,15 @@
+/* eslint-disable func-names */
+import React from 'react';
 import styled from 'styled-components';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import db from '../db.json';
+
 import Widget from '../src/components/Widgets';
-import QuizBackground from "../src/components/QuizBackground"
+import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizLogo from '../src/components/QuizLogo';
-import Head from 'next/head';
-
 
 export const QuizContainer = styled.div`
   width: 100%; 
@@ -20,34 +23,49 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
   return (
-   <>
-   <div>   
-      <Head>
-        <title>Tech Questions</title>
+    <QuizBackground backgroundImage={db.bg}>
+      <Head />
+      <QuizContainer>
+        <QuizLogo />
+        <Widget>
+          <Widget.Header>
+            <h1>Perguntas do Quiz</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <form onSubmit={function (event) {
+              event.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              // eslint-disable-next-line no-console
+              console.log('Fazendo uma submissão por meio do React');
+            }}
+            >
+              <input
+                onChange={function (infosDoEvento) {
+                  console.log(infosDoEvento.target.value);
+                  setName(infosDoEvento.target.value);
+                }}
+                placeholder="Quem me sumona?"
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Desafia-me
+                {name}
+              </button>
+            </form>
+          </Widget.Content>
+        </Widget>
+        <Widget>
+          <Widget.Content>
+            Continua aqui embaixo
+          </Widget.Content>
+        </Widget>
 
-        <meta property="og:title" content="Master Mind Quiz" key="title" />
-        <meta property="og:image" content={db.bg}/>
-        <meta property="og:image:type" content="image/jpg"/>
-    
-      </Head>   
-    </div>
-      <QuizBackground backgroundImage={db.bg}>
-            <QuizContainer>
-              <QuizLogo />
-                <Widget>
-                  <Widget.Header>
-                    <h1>Perguntas do Quiz</h1>
-                  </Widget.Header>
-                  <Widget.Content>
-                    Aqui vão as perguntas e as opções
-                  </Widget.Content>  
-                </Widget> 
+        <Footer />
+      </QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/ThiagoDC1001/mastermindquiz" />
+    </QuizBackground>
 
-              <Footer />  
-            </QuizContainer>
-        <GitHubCorner projectUrl="https://github.com/ThiagoDC1001/mastermindquiz" />
-      </QuizBackground>  
-    </>
-  )
+  );
 }
