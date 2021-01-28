@@ -1,6 +1,5 @@
 /* eslint-disable func-names */
 import React from 'react';
-import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import db from '../db.json';
@@ -10,17 +9,9 @@ import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizLogo from '../src/components/QuizLogo';
-
-export const QuizContainer = styled.div`
-  width: 100%; 
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
+import QuizContainer from '../src/components/QuizContainer';
 
 export default function Home() {
   const router = useRouter();
@@ -32,9 +23,22 @@ export default function Home() {
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>Perguntas do Quiz</h1>
+            <h1>Já ouviu falar de Jogador n°1?</h1>
           </Widget.Header>
           <Widget.Content>
+            {/* <img = Colocar uma imagem do Anorak
+              alt="Descrição"
+              style={{
+                width: '100%',
+                height: '150px',
+                objectFit: 'cover',
+              }}
+              src={}
+            /> */}
+
+            <p>
+              Eu sou Anorak o game master e programador de OASIS
+            </p>
             <form onSubmit={function (event) {
               event.preventDefault();
               router.push(`/quiz?name=${name}`);
@@ -42,24 +46,25 @@ export default function Home() {
               console.log('Fazendo uma submissão por meio do React');
             }}
             >
-              <input
-                onChange={function (infosDoEvento) {
-                  console.log(infosDoEvento.target.value);
+              <Input
+                name="nomeDoUsuario"
+                onChange={(infosDoEvento) => {
                   setName(infosDoEvento.target.value);
                 }}
                 placeholder="Quem me sumona?"
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
-                Desafia-me
-                {name}
-              </button>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Desafia-me ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
         <Widget>
-          <Widget.Content>
-            Continua aqui embaixo
-          </Widget.Content>
+          <Widget.Header>
+            Outros jogadores demonstraram sua sabedoria
+          </Widget.Header>
+          <Widget.Content />
         </Widget>
 
         <Footer />
