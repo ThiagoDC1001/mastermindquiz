@@ -4,27 +4,65 @@
   "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://64.media.tumblr.com/027828799032154cf84712560402cb51/tumblr_p0rm5qaGSz1ttzu1no1_540.gifv",
+      "title": "Qual é o verdadeiro nome do Parzival?",
       "description": "Essa é pra aquecer",
-      "answer": 2,
+      "answer": 0,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Wade Watts",
+        "Peter Parker",
+        "Matt Murdock",
+        "Patolino"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "https://media1.tenor.com/images/bf5f8423f1fd9cf4829fb63f72df9904/tenor.gif?itemid=10516632",
+      "title": "Da onde vem a referência para esse nome?",
+      "description": "Essa é pra aquecer",
+      "answer": 2,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+        "Era o nome do seu avô",
+        "Foi um desejo de sua mãe",
+        "Os heróis da Marvel tem letras duplicadas",
+        "É um nome manero"
       ]
-    }
+    },
+    {
+      "image": "https://media4.giphy.com/media/p4wE1ZnCilkY72L7UR/giphy.gif",
+      "title": "Qual é o carro que Parzival tem?",
+      "description": "Essa é pra aquecer",
+      "answer": 3,
+      "alternatives": [
+        "Quem precisa de carro?",
+        "Bat-Móvel",
+        "Ecto-1",
+        "DeLorian"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/35B3Val0pYgtpScqsz/giphy.gif",
+      "title": "Qual era o valor da moeda que Parzival usou para a vida extra?",
+      "description": "Essa é pra aquecer",
+      "answer": 2,
+      "alternatives": [
+        "50 centavos",
+        "1 dólar",
+        "25 centavos",
+        "1 real"
+      ]
+    },
+    {
+      "image": "https://64.media.tumblr.com/90975ca2119ad635000b059fee10afcb/tumblr_pqixlmumeL1qjkyrso2_500.gifv",
+      "title": "Primeiro para a chave...",
+      "description": "Essa é pra aquecer",
+      "answer": 2,
+      "alternatives": [
+        "Todos por um",
+        "Iabadabadu",
+        "Farinha pouco meu pirão primeiro",
+        "Primeiro para o ovo"
+      ]
+    }    
   ],
   "external": [
     ""

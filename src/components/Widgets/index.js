@@ -72,6 +72,6 @@ Widget.Img = styled.div`
       height: '150px',
       objectFit: 'cover',
     }}
-`
+`;
 
 export default Widget;
