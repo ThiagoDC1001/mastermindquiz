@@ -6,7 +6,7 @@
     {
       "image": "https://64.media.tumblr.com/027828799032154cf84712560402cb51/tumblr_p0rm5qaGSz1ttzu1no1_540.gifv",
       "title": "Qual é o verdadeiro nome do Parzival?",
-      "description": "Essa é pra aquecer",
+      "description": "Começamos com uma fácil",
       "answer": 0,
       "alternatives": [
         "Wade Watts",
@@ -18,7 +18,7 @@
     {
       "image": "https://media1.tenor.com/images/bf5f8423f1fd9cf4829fb63f72df9904/tenor.gif?itemid=10516632",
       "title": "Da onde vem a referência para esse nome?",
-      "description": "Essa é pra aquecer",
+      "description": "Aqui já começa a complicar",
       "answer": 2,
       "alternatives": [
         "Era o nome do seu avô",
@@ -30,7 +30,7 @@
     {
       "image": "https://media4.giphy.com/media/p4wE1ZnCilkY72L7UR/giphy.gif",
       "title": "Qual é o carro que Parzival tem?",
-      "description": "Essa é pra aquecer",
+      "description": "Um clássico",
       "answer": 3,
       "alternatives": [
         "Quem precisa de carro?",
@@ -42,7 +42,7 @@
     {
       "image": "https://media.giphy.com/media/35B3Val0pYgtpScqsz/giphy.gif",
       "title": "Qual era o valor da moeda que Parzival usou para a vida extra?",
-      "description": "Essa é pra aquecer",
+      "description": "Só quem viveu sabe",
       "answer": 2,
       "alternatives": [
         "50 centavos",
@@ -53,19 +53,22 @@
     },
     {
       "image": "https://64.media.tumblr.com/90975ca2119ad635000b059fee10afcb/tumblr_pqixlmumeL1qjkyrso2_500.gifv",
-      "title": "Primeiro para a chave...",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
+      "title": " 'Primeiro para a chave...' ",
+      "description": "Você se lembra?",
+      "answer": 3,
       "alternatives": [
-        "Todos por um",
-        "Iabadabadu",
-        "Farinha pouco meu pirão primeiro",
-        "Primeiro para o ovo"
+        "'Todos por um'",
+        "'Iabadabadu'",
+        "'Farinha pouco meu pirão primeiro'",
+        "'Primeiro para o ovo'"
       ]
     }    
   ],
   "external": [
-    ""
+    "https://brunoquiz.brunosaibert.vercel.app",
+    "https://geek-quiz.andrevtavares.vercel.app",
+    "https://avengersquiz.penadev.vercel.app"
+
   ],
   "theme": {
     "colors": {
@@ -77,5 +80,8 @@
       "success": "#4CAF50"
     },
     "borderRadius": "4px"
+  },
+  "loading": {      
+    "image": "https://s3.amazonaws.com/gs-geo-images/3f52b95c-572a-45d0-a9be-3c9af0c51578_l.png"
   }
 }

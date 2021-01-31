@@ -64,14 +64,4 @@ Widget.Topic = styled.a`
   }
 `;
 
-Widget.Img = styled.div`
-    <img
-    alt="Descrição"
-    style={{
-      width: '100%',
-      height: '150px',
-      objectFit: 'cover',
-    }}
-`;
-
 export default Widget;
